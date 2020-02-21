@@ -1,0 +1,20 @@
+<h3 *ngIf="products; else noProduct">{{ title }}</h3>
+<div class="form-group">
+    <input class="form-control" id="productName" placeholder="Enter search words" [(ngModel)] = "filterText">
+    <small *ngIf="filterText" class="form-text text-muted">You can search <strong>{{ filterText }}</strong> now</small>
+</div>
+<div class="row">
+    <ng-template #noProduct>
+        <div class="alert alert-primary" role="alert">
+            Products not found.
+        </div>
+    </ng-template>
+    <div *ngFor="let product of products | productFilter:filterText" class="card" style="width: 18rem;">
+        <img src="https://picsum.photos/200" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{{ product.title }}</h5>
+            <p class="card-text">{{ product.title }}</p>
+            <a (click)="addToCart(product)" class="btn btn-primary">Add To Cart</a>
+        </div>
+    </div>
+</div>
