@@ -10,7 +10,7 @@ export class ProductService {
 
   path = "https://jsonplaceholder.typicode.com/posts";
 
-  getProducts(): Observable<Product[]>{
+  getProducts(categoryId: number): Observable<Product[]>{
     return this.httpClient.get<Product[]>(this.path);
   }
 }

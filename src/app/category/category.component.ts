@@ -17,19 +17,19 @@ export class CategoryComponent implements OnInit {
       name: "Category 1"
     },
     {
-      id: 1,
+      id: 2,
       name: "Category 2"
     },
     {
-      id: 1,
+      id: 3,
       name: "Category 3"
     },
     {
-      id: 1,
+      id: 4,
       name: "Category 4"
     },
     {
-      id: 1,
+      id: 5,
       name: "Category 5"
     }
   ];
