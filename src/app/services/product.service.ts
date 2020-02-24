@@ -8,9 +8,14 @@ export class ProductService {
 
   constructor(private httpClient: HttpClient) { }
 
-  path = "https://jsonplaceholder.typicode.com/posts";
+  path = "http://localhost:3000/products";
 
-  getProducts(categoryId: number): Observable<Product[]>{
-    return this.httpClient.get<Product[]>(this.path);
+  getProducts(categoryId: number): Observable<Product[]> {
+    let newPath = this.path;
+
+    if (categoryId) {
+      newPath += "?categoryId=" + categoryId;
+    }
+    return this.httpClient.get<Product[]>(newPath);
   }
 }
