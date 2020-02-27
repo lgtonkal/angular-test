@@ -10,7 +10,7 @@
             Products not found.
         </div>
     </ng-template>
-    <div *ngFor="let product of products | productFilter:filterText" class="productBox" style="width: 18rem;">
+    <div *ngFor="let product of products | productFilter:filterText" class="productBox">
         <img [src]="product.imageUrl" class="card-img-top">
         <div class="card-body">
             <h5 class="card-title">{{ product.name }} {{ product.price | currency }}</h5>
