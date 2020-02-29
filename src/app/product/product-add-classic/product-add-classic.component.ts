@@ -31,7 +31,7 @@ export class ProductAddClassicComponent implements OnInit {
   add(form: NgForm) {
     this.productService.addProduct(this.model).subscribe(data => {
       if (data) {
-        this.alertifyService.success(data.name + "added.");
+        this.alertifyService.success(data.name + " added.");
       } else {
         this.alertifyService.error("Product could not be added!");
       }

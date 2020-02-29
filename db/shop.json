@@ -55,6 +55,14 @@
       "price": 120,
       "categoryId": "2",
       "id": 7
+    },
+    {
+      "name": "Product H",
+      "description": "This is a test description.",
+      "imageUrl": "https://picsum.photos/200",
+      "price": 122.99,
+      "categoryId": "2",
+      "id": 8
     }
   ],
   "categories": [
